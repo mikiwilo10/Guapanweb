@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+  <f:facet name="header">
+        Write your own custom rich components with built-in AJAX support
+        </f:facet>
+		<h:form class="form-horizontal form-material">
+		<h:outputText value="Panel Body" /> 
+		
+		<label class="col-md-12">Nombre</label>
+		<div class="col-md-12">
+		<h:inputText id="txtcedula" value="#{productoBean.p.nombre}"
+		 />
+		</div>
+		<label class="col-md-12">Apellido</label>
+		<div class="col-md-12">
+		<h:inputText id="txtapellido" value="#{productoBean.p.apellido}"
+		 />
+		</div>
+		<label class="col-md-12">Edad</label>
+		<div class="col-md-12">
+		<h:inputText id="txtedad" value="#{productoBean.p.edad}"
+		 />
+		</div>
+		
+		<div class="col-sm-12">
+
+					<h:commandButton 
+						value="Guardar" action="#{productoBean.guardarDatos()}" class="btn btn-success" />
+
+				</div>
+				
+				</h:form>
+</h:head> 
+
+      
+		
+		
+</html>
