@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+
+
+<f:metadata>
+				<f:viewParam name="idCuenta" value="#{productoBean.p.id_producto}">
+				</f:viewParam>
+
+			</f:metadata>
+
+
+</h:head>
+<h:body>
+	<f:facet name="header">
+
+	</f:facet>
+	<h:form class="form-horizontal form-material">
+
+<h:inputText id="idp" value="#{productoBean.p.id_producto}" />
+
+		<label class="col-md-12">Codigo Producto</label>
+		<div class="col-md-12">
+
+			<h:inputText id="codigo" value="#{productoBean.idp}" />
+		</div>
+
+		<label class="col-md-12">Cantidad Producto</label>
+		<div class="col-md-12">
+			<h:inputText id="cantidad" value="#{productoBean.cantidad}" />
+		</div>
+
+
+		<div class="col-sm-12">
+
+			<h:commandButton value="Guardar" action="#{productoBean.Pedido()}" class="btn btn-success" />
+		</div>
+		<h:column>
+
+			<a href="listar.xhtml">Listar Producto</a>
+		</h:column>
+	</h:form>
+</h:body>
+</html>

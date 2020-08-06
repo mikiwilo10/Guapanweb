@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<h:body>
+	<h1>Ver Contactos</h1>
+
+
+	<h:dataTable value="#{productoBean.lista}" var="pro" class="table">
+
+
+
+		<h:column>
+			<f:facet name="header">Codigo Producto</f:facet>
+                         #{pro.id_producto} 
+                </h:column>
+
+		<br />
+		<br />
+
+		<h:column>
+			<f:facet name="header">Nombre Producto</f:facet>
+                     #{pro.descripcion}
+                </h:column>
+
+		<br />
+		<br />
+		<h:column>
+			<f:facet name="header">Proveedor</f:facet>
+                       #{pro.pro.nombre}
+                </h:column>
+
+		<br />
+		<br />
+
+		<h:column>
+			<f:facet name="header">Stock</f:facet>
+                      #{pro.stock}
+        </h:column>
+		<h:column>
+			
+			<a href = "Pedido.xhtml?producto=#{pro.id_producto}">Solicitar Pedido</a> 
+        </h:column>
+        
+        
+        <h:column>
+					<f:facet name="header"></f:facet>
+					<!-- <h:commandButton action="#{socioBean.editarSocio(socio.cedulaSocio)}"  value="Editar"/> -->
+
+					<h:commandButton
+						
+							action="#{productoBean.redirigeCrearRetiro(pro.id_producto)}"
+						value="Solicitar Pedido" class="btn btn-dropbox" />
+
+				
+
+
+				</h:column>
+        
+
+	</h:dataTable>
+</h:body>
+</html>
