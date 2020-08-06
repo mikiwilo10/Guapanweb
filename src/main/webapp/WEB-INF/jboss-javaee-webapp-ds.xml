@@ -27,7 +27,7 @@
         pool-name="jboss-javaee-webapp" enabled="true"
         use-java-context="true">
         <connection-url>jdbc:mysql://bv9gpnnvasid4ocqklzu-mysql.services.clever-cloud.com:3306/bv9gpnnvasid4ocqklzu</connection-url>
-        <driver>myqsl-driver</driver>
+        <driver>mysql-driver</driver>
         <security>
             <user-name>uxw1hlvf79msedki</user-name>
             <password>wXHUoMNgnY7U9wRajKDY</password>
